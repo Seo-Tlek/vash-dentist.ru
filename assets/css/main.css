@@ -1,0 +1,159 @@
+:root {
+  --bg: #f4f7f6;
+  --surface: #ffffff;
+  --ink: #17202b;
+  --muted: #5d6b78;
+  --line: #d9e2e4;
+  --accent: #0072ce;
+  --accent-dark: #0f5f73;
+  --accent-soft: #e8f3fb;
+  --hero: #eef6ff;
+  --footer: #0072ce;
+  --note: #f7f3ea;
+  --note-line: #e4d7bc;
+  --shadow: 0 10px 30px rgba(23, 32, 43, 0.06);
+  --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --serif: Georgia, "Palatino Linotype", Palatino, serif;
+  --wrap: 1120px;
+  --measure: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+p,
+li {
+  orphans: 3;
+  widows: 3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  z-index: 20;
+}
+
+.skip:focus {
+  top: 0.6rem;
+  color: #fff;
+}
+
+.wrap {
+  width: min(var(--wrap), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.prose {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: var(--measure);
+}
+
+.prose h2,
+.prose h3 {
+  font-family: var(--sans);
+  line-height: 1.25;
+  margin: 2rem 0 0.7rem;
+}
+
+.prose h2 {
+  font-size: 1.55rem;
+}
+
+.prose h3 {
+  font-size: 1.2rem;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose table {
+  margin: 0 0 1rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.2rem;
+}
+
+.prose li + li {
+  margin-top: 0.35rem;
+}
+
+.prose a {
+  text-underline-offset: 0.16em;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.prose th,
+.prose td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.6rem;
+}
+
+.prose th {
+  font-weight: 650;
+  color: var(--accent-dark);
+}
